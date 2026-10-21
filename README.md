@@ -4,6 +4,8 @@
 
 最初的想法是到达倒一房间时播放《雨爱 DJ 版》，但曲目有版权，所以仓库**不附带任何音乐文件**。请自行准备 OGG 并放入 mod 的 `Audio/` 目录。
 
+Mod会尝试使用一些规则启发式的推断最后一个GP房间，不过对于有传送(如烈冕号等地图)或者比较非线性的图(如世界大穴等地图)，检测是不准确的。如果你在CCT（[Celeste Consistency Tracker](https://github.com/viddie/ConsistencyTrackerMod)中设置了路径，会有助于启发式推断的检测，但仍不保证100%的准确率。
+
 ## 功能
 
 - 检测金草莓、银草莓、铂金草莓；忽略 `SpeedBerry`
