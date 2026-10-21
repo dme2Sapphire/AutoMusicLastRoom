@@ -1,0 +1,11 @@
+- Name: AutoMusicLastRoom
+  Version: 1.0.0
+  DLL: bin/AutoMusicLastRoom.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.4.0
+  OptionalDependencies:
+    - Name: ConsistencyTracker
+      Version: 2.0.0
+    - Name: CollabUtils2
+      Version: 1.0.0

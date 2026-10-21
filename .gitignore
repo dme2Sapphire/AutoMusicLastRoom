@@ -1,0 +1,21 @@
+# Build output
+bin/
+Source/bin/
+Source/obj/
+
+# Local packages and scratch
+.pack/
+.pack-nomusic/
+.research/
+*.zip
+
+# Source videos and copyrighted BGM
+*.mp4
+Audio/*.ogg
+Audio/*.qoa
+
+# Editor / OS
+.vs/
+.idea/
+*.user
+Thumbs.db

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>AutoMusicLastRoom</AssemblyName>
+    <RootNamespace>Celeste.Mod.AutoMusicLastRoom</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <CelestePrefix Condition="'$(CelestePrefix)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Celeste</CelestePrefix>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <Reference Private="false" />
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <Reference Include="Celeste" HintPath="$(CelestePrefix)\Celeste.dll" Private="false" />
+    <Reference Include="FNA" HintPath="$(CelestePrefix)\FNA.dll" Private="false" />
+  </ItemGroup>
+
+  <Target Name="CopyFiles" AfterTargets="Build">
+    <MakeDir Directories="$(MSBuildProjectDirectory)\..\bin" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(MSBuildProjectDirectory)\..\bin" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(MSBuildProjectDirectory)\..\bin" Condition="Exists('$(TargetDir)$(AssemblyName).pdb')" />
+  </Target>
+
+</Project>
